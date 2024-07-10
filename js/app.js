@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const firstName = document.getElementById("firstname").value;
-    const lastName = document.getElementById("lastname").value;
-    const email = document.getElementById("email").value;
-    const hireDate = document.getElementById("hire_date").value;
-    const photoInput = document.querySelector('input[type="file"]');
-    const photoFile = photoInput.files[0];
-    const photoUrl = photoFile ? URL.createObjectURL(photoFile) : "";
+    const formData = new FormData(form);
+    const firstName = formData.get("firstname");
+    const lastName = formData.get("lastname");
+    const email = formData.get("email");
+    const hireDate = formData.get("hire_date");
+    const photo = formData.get("photo");
+    const photoUrl = URL.createObjectURL(photo);
 
     const row = document.createElement("tr");
     row.innerHTML = `
