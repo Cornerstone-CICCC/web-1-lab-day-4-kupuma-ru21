@@ -15,6 +15,7 @@
           <label>
             <span>First Name</span>
             <input
+              required
               type="text"
               name="firstname"
               id="firstname"
@@ -24,6 +25,7 @@
           <label>
             <span>Last Name</span>
             <input
+              required
               type="text"
               name="lastname"
               id="lastname"
@@ -32,18 +34,24 @@
           </label>
           <label>
             <span>Email</span>
-            <input type="email" name="email" id="email" autocomplete="off" />
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="off"
+            />
           </label>
           <label>
             <span>Hire Date</span>
-            <input type="date" name="hire_date" id="hire_date" />
+            <input required type="date" name="hire_date" id="hire_date" />
           </label>
         </fieldset>
         <fieldset>
           <legend>Profile Photo</legend>
           <label>
             <span>Upload photo</span>
-            <input type="file" name="photo" accept=".jpg, .png" />
+            <input required type="file" name="photo" accept=".jpg, .png" />
           </label>
         </fieldset>
         <fieldset class="form__btns">
