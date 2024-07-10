@@ -20,16 +20,22 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${lastName}</td>
         <td>${email}</td>
         <td>${hireDate}</td>
-        <td><button onclick="deleteEmployee(this)">Delete</button></td>
+        <td><button class="delete-btn">Delete</button></td>
       `;
     employeeList.appendChild(row);
+
+    const deleteBtn = row.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", function (event) {
+      deleteEmployee(event.target);
+    });
+
     form.reset();
   });
 });
 
 function deleteEmployee(button) {
   if (confirm("Are you sure you want to delete this employee?")) {
-    const row = button.parentNode.parentNode;
+    const row = button.closest("tr");
     row.parentNode.removeChild(row);
   }
 }
