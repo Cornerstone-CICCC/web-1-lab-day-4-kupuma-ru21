@@ -51,5 +51,19 @@ body {
   flex: 1;
   padding: 0.25rem;
 }
+.container #employees > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.container #employees > table th,
+.container #employees > table td {
+  padding: 0.5rem;
+}
+.container #employees > table th {
+  background-color: gray;
+}
+.container #employees > table td {
+  background-color: lightgray;
+}
 
 /*# sourceMappingURL=styles.css.map */
